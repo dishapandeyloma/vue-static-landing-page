@@ -3,7 +3,7 @@
 <template>
   <div class="h-730 bg-banner">
     <div class="flex h-80% items-center">
-      <div class="container text-center text-white">
+      <div class="main-container text-center text-white">
         <h1 class="text-48 font-700 mt-20">TG Baowang</h1>
         <h2 class="text-32 font-700 mt-20">TG Baowang White Label Platform</h2>
         <p class="text-20 font-400 mt-20 leading-36">

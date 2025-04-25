@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 <template>
   <header class="blueGradient h-90 text-white">
-    <nav class="container flex justify-between items-center p-4">
+    <nav class="main-container flex justify-between items-center p-4">
       <div class="logo">
         <img src="" alt="Logo" class="h-8" />
       </div>

@@ -3,7 +3,7 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <AppHeader />
-    <div class="flex-1 box-border min-h-screen">
+    <div class="flex-1 box-border">
       <RouterView v-slot="{ Component }">
         <component :is="Component" />
       </RouterView>
