@@ -8,8 +8,6 @@ import { NButton } from 'naive-ui'
     :bordered="false"
     text-color="#fff"
   >
-    <span class="text-16">
-      <slot> </slot>
-    </span>
+    <slot> </slot>
   </NButton>
 </template>

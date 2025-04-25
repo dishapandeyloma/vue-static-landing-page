@@ -28,8 +28,9 @@ Baccarat like never before.`,
 </script>
 
 <template>
-  <div class="main-container mt-20">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-24">
+  <section class="main-container mt-30">
+    <h2 class="text-32 text-center">{{ $t('products') }}</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-24 mt-30">
       <div v-for="(card, index) in cards" :key="index" class="relative">
         <div class="absolute top-250 goldenGradient h-65 rounded-10 w-full z-0">
           <div
@@ -48,5 +49,5 @@ Baccarat like never before.`,
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
