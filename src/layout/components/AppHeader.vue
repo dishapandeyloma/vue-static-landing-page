@@ -15,25 +15,27 @@ const changeLanguage = (lang: string) => {
 </script>
 <template>
   <header class="blueGradient h-90 text-white">
-    <nav class="main-container flex justify-between items-center p-4">
+    <nav class="main-container f-c-b p-4 gap-x-6">
       <div class="p-6">
         <img alt="Logo" class="h-65 w-65" :src="logo" />
       </div>
-      <ul class="flex space-x-4">
+      <ul class="flex-1 flex justify-end gap-10 p-6">
         <li v-for="link in navLinks" :key="link.name">
-          <div>
-            <RouterLink :to="link.path" class="text-16 font-500">{{ link.name }}</RouterLink>
+          <div class="flex gap-x-4">
+            <RouterLink
+              :to="link.path"
+              class="text-16 font-500 text-#fff hover:text-primary"
+              active-class="text-primary hover:text-primary font-semibold"
+              >{{ link.name }}
+            </RouterLink>
             <div
               v-if="link.name !== navLinks[navLinks.length - 1].name"
-              class="h-20 w-2 bg-#FFFFFF40 mx-2"
+              class="h-20 w-2 bg-#FFFFFF40"
             ></div>
           </div>
         </li>
-        <li class="flex items-center space-x-4">
-          <span @click="changeLanguage('en')" class="cursor-pointer">EN</span>
-          <span @click="changeLanguage('zh')" class="cursor-pointer">ZH</span>
-        </li>
       </ul>
+      <div class="p-6">Change language</div>
     </nav>
   </header>
 </template>

@@ -13,4 +13,10 @@ export default defineConfig({
     ['blueGradient', { background: 'linear-gradient(180deg, #38578F 0%, #101929 100%)' }],
     ['goldenGradient', { background: 'linear-gradient(180deg, #A87C25 0%, #553E12 100%)' }],
   ],
+  theme: {
+    colors: {
+      primary: '#A57A24',
+      secondary: '#A87C25',
+    },
+  },
 })
