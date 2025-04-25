@@ -1,5 +1,9 @@
 <script lang="ts" setup></script>
 
-<template>hiqqq</template>
+<template>
+  <BannerView />
+  <ProductView />
+  <ServicesView />
+</template>
 
 <style lang="scss" scoped></style>

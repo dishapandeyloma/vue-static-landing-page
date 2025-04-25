@@ -3,11 +3,11 @@
 <template>
   <div class="flex flex-col min-h-screen">
     <AppHeader />
-    <main class="flex-1 p-4">
+    <div class="flex-1 box-border min-h-screen">
       <RouterView v-slot="{ Component }">
         <component :is="Component" />
       </RouterView>
-    </main>
+    </div>
     <AppFooter />
   </div>
 </template>

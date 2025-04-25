@@ -11,5 +11,6 @@ export default defineConfig({
     ['flex-col', 'flex flex-col'],
     ['text-ellipsis', 'truncate'],
     ['blueGradient', { background: 'linear-gradient(180deg, #38578F 0%, #101929 100%)' }],
+    ['goldenGradient', { background: 'linear-gradient(180deg, #A87C25 0%, #553E12 100%)' }],
   ],
 })

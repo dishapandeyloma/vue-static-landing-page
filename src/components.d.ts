@@ -10,15 +10,11 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppFooter: typeof import('./layout/components/AppFooter.vue')['default']
     AppHeader: typeof import('./layout/components/AppHeader.vue')['default']
-    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
-    IconCommunity: typeof import('./components/icons/IconCommunity.vue')['default']
-    IconDocumentation: typeof import('./components/icons/IconDocumentation.vue')['default']
-    IconEcosystem: typeof import('./components/icons/IconEcosystem.vue')['default']
-    IconSupport: typeof import('./components/icons/IconSupport.vue')['default']
-    IconTooling: typeof import('./components/icons/IconTooling.vue')['default']
+    BannerView: typeof import('./components/home/BannerView.vue')['default']
+    CButton: typeof import('./components/common/CButton.vue')['default']
+    ProductView: typeof import('./components/home/ProductView.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    TheWelcome: typeof import('./components/TheWelcome.vue')['default']
-    WelcomeItem: typeof import('./components/WelcomeItem.vue')['default']
+    ServicesView: typeof import('./components/home/ServicesView.vue')['default']
   }
 }
