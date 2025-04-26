@@ -51,11 +51,9 @@ const navLinks = [
 ]
 
 const changeLanguage = (lang: string) => {
-  // Implement your language change logic here
   console.log(`Language changed to: ${lang}`)
 }
 
-// Add mobile menu state
 const mobileMenuOpen = ref(false)
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
@@ -69,12 +67,12 @@ const toggleMobileMenu = () => {
         <img alt="Logo" class="h-50 w-auto sm:h-65" :src="logo" />
       </div>
 
-      <!-- Mobile menu button -->
-      <button @click="toggleMobileMenu" class="block md:hidden p-2">
-        <div class="w-6 h-0.5 bg-white mb-1.5"></div>
-        <div class="w-6 h-0.5 bg-white mb-1.5"></div>
-        <div class="w-6 h-0.5 bg-white"></div>
-      </button>
+      <SvgIcon
+        name="menu"
+        class="absolute top-10 right-10 cursor-pointer md:hidden"
+        @click="toggleMobileMenu"
+        size="24"
+      />
 
       <!-- Desktop menu -->
       <ul class="hidden md:flex flex-1 justify-end gap-4 lg:gap-10 p-2 sm:p-6">
