@@ -23,7 +23,7 @@ export default defineConfig({
       dts: 'src/auto-imports.d.ts',
     }),
     createSvgIconsPlugin({
-      iconDirs: [path.resolve(process.cwd(), 'assets/icons')],
+      iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
       symbolId: 'icon-[name]',
     }),
   ],
