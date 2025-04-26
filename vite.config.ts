@@ -4,6 +4,8 @@ import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import path from 'path'
 
 export default defineConfig({
   plugins: [
@@ -19,6 +21,10 @@ export default defineConfig({
     AutoImport({
       imports: ['vue', 'vue-router', 'pinia'],
       dts: 'src/auto-imports.d.ts',
+    }),
+    createSvgIconsPlugin({
+      iconDirs: [path.resolve(process.cwd(), 'assets/icons')],
+      symbolId: 'icon-[name]',
     }),
   ],
   resolve: {

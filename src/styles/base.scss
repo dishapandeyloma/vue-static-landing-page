@@ -1,9 +1,9 @@
 body,
 html {
-    font-size   : 4px;
+    font-size   :4px;
     font-family : 'Roboto', sans-serif !important;
     font-display: fallback;
-    min-width   : 1000px;
+    //  min-width   : 1000px;
 }
 
 body {
@@ -43,4 +43,5 @@ html::-webkit-scrollbar-thumb:active {
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
+     width: 100%;
   }
