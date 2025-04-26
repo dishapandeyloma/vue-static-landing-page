@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="h-270 lg:h-530 bg-banner">
+  <div class="h-270 lg:h-530 bg-banner ">
     <div class="flex h-100% lg:h-80% items-center">
       <div class="main-container text-center text-white">
         <h1 class="text-24 lg:text-48  font-700 mt-10 lg:mt-20">TG Baowang</h1>

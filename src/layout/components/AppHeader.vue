@@ -40,7 +40,7 @@ const toggleMobileMenu = () => {
 </script>
 
 <template>
-  <header class="sm:h-auto md:h-auto min-h-67 text-white blueGradient">
+  <header class="sm:h-auto md:h-auto min-h-67 text-white blueGradient user-select-none">
     <nav class="main-container flex flex-wrap justify-between items-center py-4">
       <div class="p-2 sm:p-6">
         <img alt="Logo" class="h-50 w-auto sm:h-65" :src="logo" />
@@ -70,6 +70,10 @@ const toggleMobileMenu = () => {
           </div>
         </li>
       </ul>
+
+<!-- Mobile menu -->
+ 
+
       <div class="flex items-center gap-10 p-6 mr-40 md:mr-0">
         <img :src="languageIcon" :alt="currentLang" class="w-32 h-32 ml-10" />
         <span class="cursor-pointer text-16 font-500">{{
@@ -77,7 +81,14 @@ const toggleMobileMenu = () => {
         }}</span>
         <n-popover trigger="hover" placement="bottom-end" class="cursor-pointer">
           <template #trigger>
-            <SvgIcon name="arrow-down" size="12" class="cursor-pointer transition-transform duration-300 hover:rotate-180" color="#ffff" />
+            <div class="group">
+              <SvgIcon
+                name="arrow-down"
+                size="12"
+                class="transition-transform duration-300 group-hover:rotate-180"
+                color="#ffff"
+              />
+            </div>
           </template>
           <div class="flex flex-col gap-16 p-4">
             <div
