@@ -3,7 +3,7 @@ html {
     font-size   :4px;
     font-family : 'Roboto', sans-serif !important;
     font-display: fallback;
-    //  min-width   : 1000px;
+   
 }
 
 body {
@@ -45,3 +45,12 @@ html::-webkit-scrollbar-thumb:active {
     padding-right: 1rem;
      width: 100%;
   }
+
+
+  .n-popover:not(.n-popover--raw):not(.n-popover--scrollable):not(.n-popover--show-header-or-footer) {
+    padding: 16px 16px
+}
+
+[v-placement="bottom-end"] > .n-popover-shared.n-popover-shared--show-arrow {
+    margin-top: 18px;
+}

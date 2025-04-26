@@ -1,47 +1,16 @@
-<!-- <script lang="ts" setup>
-import logo from '@/assets/imgs/logo.png'
-
-const navLinks = [
-  { name: 'Products & Services', path: '/' },
-  { name: 'Partner', path: '/partners' },
-  { name: 'Company', path: '/about-us' },
-  { name: 'Contact Us', path: '/contact' },
-]
-
-const changeLanguage = (lang: string) => {
-  console.log(`Language changed to: ${lang}`)
-}
-</script>
-<template>
-  <header class="blueGradient h-90 text-white">
-    <nav class="main-container f-c-b p-4 gap-x-6">
-      <div class="p-6">
-        <img alt="Logo" class="h-65 w-65" :src="logo" />
-      </div>
-      <ul class="flex-1 flex justify-end items-center gap-16 p-6">
-        <template v-for="(link, index) in navLinks" :key="link.name">
-          <li>
-            <RouterLink
-              :to="link.path"
-              class="text-16 font-700 text-#fff hover:text-primary"
-              active-class="text-primary hover:text-primary font-semibold"
-            >
-              {{ link.name }}
-            </RouterLink>
-          </li>
-          <div v-if="index < navLinks.length - 1" class="h-20 w-2 bg-#FFFFFF40"></div>
-        </template>
-      </ul>
-      <div class="p-6">Change language</div>
-    </nav>
-  </header>
-</template>
-
-<style lang="scss" scoped></style> -->
-
 <script lang="ts" setup>
 import logo from '@/assets/imgs/logo.png'
-import { ref } from 'vue'
+import en from '@/assets/icons/en.svg'
+import zh from '@/assets/icons/zh.svg'
+import { NPopover, NCheckbox } from 'naive-ui'
+import i18n from '@/i18n'
+
+const showPopover = ref(false)
+
+const languages = [
+  { name: 'English', code: 'en', icon: en },
+  { name: 'Chinese ', code: 'zh', icon: zh },
+]
 
 const navLinks = [
   { name: 'Products & Services', path: '/' },
@@ -50,9 +19,19 @@ const navLinks = [
   { name: 'Contact Us', path: '/contact' },
 ]
 
+const currentLang = ref(localStorage.getItem('app-lang') || 'en')
+
 const changeLanguage = (lang: string) => {
-  console.log(`Language changed to: ${lang}`)
+  localStorage.setItem('app-lang', lang)
+  i18n.global.setLocaleMessage(lang, i18n.global.getLocaleMessage(lang))
+  currentLang.value = lang
+  showPopover.value = false
 }
+
+const languageIcon = computed(() => {
+  const selectedLanguage = languages.find((lang) => lang.code === currentLang.value)
+  return selectedLanguage ? selectedLanguage.icon : ''
+})
 
 const mobileMenuOpen = ref(false)
 const toggleMobileMenu = () => {
@@ -61,7 +40,7 @@ const toggleMobileMenu = () => {
 </script>
 
 <template>
-  <header class="blueGradient h-auto min-h-90 text-white">
+  <header class="sm:h-auto md:h-auto min-h-67 text-white blueGradient">
     <nav class="main-container flex flex-wrap justify-between items-center py-4">
       <div class="p-2 sm:p-6">
         <img alt="Logo" class="h-50 w-auto sm:h-65" :src="logo" />
@@ -69,18 +48,18 @@ const toggleMobileMenu = () => {
 
       <SvgIcon
         name="menu"
-        class="absolute top-10 right-10 cursor-pointer md:hidden"
+        class="absolute top-20 right-10 cursor-pointer md:hidden"
         @click="toggleMobileMenu"
         size="24"
       />
 
       <!-- Desktop menu -->
-      <ul class="hidden md:flex flex-1 justify-end gap-4 lg:gap-10 p-2 sm:p-6">
+      <ul class="hidden md:flex flex-1 items-center justify-end gap-4 md:gap-10 p-2 sm:p-6">
         <li v-for="link in navLinks" :key="link.name">
-          <div class="flex gap-x-2 lg:gap-x-4">
+          <div class="flex gap-x-10 md:gap-x-20">
             <RouterLink
               :to="link.path"
-              class="text-14 sm:text-16 font-500 text-#fff hover:text-primary"
+              class="text-16 sm:text-16 font-500 text-#fff hover:text-primary ml-10"
               active-class="text-primary hover:text-primary font-semibold"
               >{{ link.name }}
             </RouterLink>
@@ -91,26 +70,33 @@ const toggleMobileMenu = () => {
           </div>
         </li>
       </ul>
-
-      <!-- Mobile menu -->
-      <div v-show="mobileMenuOpen" class="w-full md:hidden mt-4 bg-#00000080 rounded-md">
-        <ul class="flex flex-col p-4">
-          <li
-            v-for="link in navLinks"
-            :key="link.name"
-            class="py-2 border-b border-#ffffff30 last:border-0"
-          >
-            <RouterLink
-              :to="link.path"
-              class="block text-16 font-500 text-#fff hover:text-primary"
-              active-class="text-primary hover:text-primary font-semibold"
-              >{{ link.name }}
-            </RouterLink>
-          </li>
-        </ul>
+      <div class="flex items-center gap-10 p-6 mr-40 md:mr-0">
+        <img :src="languageIcon" :alt="currentLang" class="w-32 h-32 ml-10" />
+        <span class="cursor-pointer">{{
+          languages.find((lang) => lang.code === currentLang)?.name
+        }}</span>
+        <n-popover trigger="hover" placement="bottom-end" class="cursor-pointer">
+          <template #trigger>
+            <SvgIcon name="arrow-down" size="12" class="cursor-pointer" color="#ffff" />
+          </template>
+          <div class="flex flex-col gap-16 p-4">
+            <div
+              v-for="lang in languages"
+              :key="lang.code"
+              class="flex items-center gap-10 cursor-pointer"
+            >
+              <img :src="lang.icon" :alt="lang.name" class="w-24 h-24" />
+              <span class="text-16 font-500">{{ lang.name }}</span>
+              <n-checkbox
+                :value="currentLang"
+                :checked="currentLang === lang.code"
+                class="ml-auto cursor-pointer"
+                @update:checked="changeLanguage(lang.code)"
+              ></n-checkbox>
+            </div>
+          </div>
+        </n-popover>
       </div>
-
-      <div class="hidden md:block p-2 sm:p-6">Change language</div>
     </nav>
   </header>
 </template>

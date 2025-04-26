@@ -10,7 +10,6 @@ import path from 'path'
 export default defineConfig({
   plugins: [
     vue(),
-
     UnoCSS(),
     Components({
       dirs: ['src/components', 'src/layout/components'],
