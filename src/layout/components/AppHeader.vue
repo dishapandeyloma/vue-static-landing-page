@@ -72,12 +72,12 @@ const toggleMobileMenu = () => {
       </ul>
       <div class="flex items-center gap-10 p-6 mr-40 md:mr-0">
         <img :src="languageIcon" :alt="currentLang" class="w-32 h-32 ml-10" />
-        <span class="cursor-pointer">{{
+        <span class="cursor-pointer text-16 font-500">{{
           languages.find((lang) => lang.code === currentLang)?.name
         }}</span>
         <n-popover trigger="hover" placement="bottom-end" class="cursor-pointer">
           <template #trigger>
-            <SvgIcon name="arrow-down" size="12" class="cursor-pointer" color="#ffff" />
+            <SvgIcon name="arrow-down" size="12" class="cursor-pointer transition-transform duration-300 hover:rotate-180" color="#ffff" />
           </template>
           <div class="flex flex-col gap-16 p-4">
             <div

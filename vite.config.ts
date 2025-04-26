@@ -8,6 +8,10 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import path from 'path'
 
 export default defineConfig({
+  server: {
+    host: true,
+
+  },
   plugins: [
     vue(),
     UnoCSS(),

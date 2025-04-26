@@ -29,7 +29,7 @@ Baccarat like never before.`,
 
 <template>
   <section class="main-container mt-30">
-    <h2 class="text-32 text-center">{{ $t('products') }}</h2>
+    <h2 class="text-18 lg:text-32 font-700 text-center">{{ $t('products') }}</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-24 mt-30">
       <div v-for="(card, index) in cards" :key="index" class="relative">
         <div class="absolute top-250 goldenGradient h-65 rounded-10 w-full z-0">
@@ -40,11 +40,11 @@ Baccarat like never before.`,
           </div>
         </div>
 
-        <div class="bg-#efefef h-270 rounded-10 relative z-10 p-40">
+        <div class="bg-#efefef  h-270 rounded-10 relative z-10 p-20">
           <img :src="card.image" :alt="card.title" class="wh-full" />
         </div>
 
-        <div class="card-description mt-60">
+        <div class="mt-60">
           <p class="leading-24 text-14 font-400">{{ card.description }}</p>
         </div>
       </div>
