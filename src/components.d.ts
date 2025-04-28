@@ -14,6 +14,7 @@ declare module 'vue' {
     CButton: typeof import('./components/common/CButton.vue')['default']
     CIcon: typeof import('./components/common/CIcon.vue')['default']
     CLanguage: typeof import('./components/common/CLanguage.vue')['default']
+    ContactUsBanner: typeof import('./components/common/ContactUsBanner.vue')['default']
     ProductView: typeof import('./components/home/ProductView.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
