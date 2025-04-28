@@ -1,5 +1,11 @@
 <script lang="ts" setup>
-import logo from '@/assets/imgs/logo.png'
+
+import logo from '@/assets/imgs/home/logo.png'
+
+
+const router = useRouter()
+
+
 const navLinks = [
   { name: 'Products & Services', path: '/' },
   { name: 'Partner', path: '/partners' },
@@ -17,7 +23,12 @@ const toggleMobileMenu = () => {
   <header class="sm:h-auto md:h-auto min-h-67 text-white blueGradient user-select-none">
     <nav class="main-container flex flex-wrap justify-between items-center py-4">
       <div class="p-2 sm:p-6">
-        <img alt="Logo" class="h-50 w-auto sm:h-65" :src="logo" />
+        <img
+          alt="Logo"
+          class="h-50 w-auto sm:h-65 cursor-pointer"
+          :src="logo"
+          @click="router.push('/')"
+        />
       </div>
 
       <SvgIcon name="menu" class="absolute top-20 right-10 cursor-pointer md:hidden" @click="toggleMobileMenu"

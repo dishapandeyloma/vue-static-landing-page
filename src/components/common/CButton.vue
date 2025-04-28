@@ -3,7 +3,7 @@ import { NButton } from 'naive-ui'
 </script>
 <template>
   <NButton
-    class="w-120 h-40 lg:w-200 lg:h-56 goldenGradient box-border"
+    class="w-fit h-40 lg:h-56 goldenGradient box-border"
     style="background: linear-gradient(180deg, #a87c25 0%, #553e12 100%)"
     :bordered="false"
     text-color="#fff"

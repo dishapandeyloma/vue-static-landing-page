@@ -24,6 +24,11 @@ const router = createRouter({
       name: 'aboutus',
       component: () => import('../views/AboutUs.vue'),
     },
+    {
+      path: '/whitelabel',
+      name: 'whiteLabel',
+      component: () => import('../views/products/WhiteLabel.vue'),
+    },
   ],
 })
 

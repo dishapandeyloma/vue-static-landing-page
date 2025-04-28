@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import whitelabel from '@/assets/imgs/whitelabel.png'
-import tglive from '@/assets/imgs/tglive.png'
-import telebet from '@/assets/imgs/telebet.png'
+import whitelabel from '@/assets/imgs/home/whitelabel.png'
+import tglive from '@/assets/imgs/home/tglive.png'
+import telebet from '@/assets/imgs/home/telebet.png'
 
 const cards = [
   {
@@ -30,6 +30,13 @@ Baccarat like never before.`,
 <template>
   <section class="main-container mt-30">
     <h2 class="text-18 lg:text-32 font-700 text-center">{{ $t('products') }}</h2>
+    <!-- another approach , in this give bacgrounf of gradient so it will have similar button effect -->
+    <!-- <div class="bg-red-500 rounded-10 shadow-md w-300">
+      <div class="w-fit bg-#FFFFFF40 rounded-10 w-full">
+        <img :src="whitelabel" alt="Description" class="h-200 p-10" />
+      </div> 
+      <p class="text-white text-32 text-center mt-2">Your text here</p>
+    </div>-->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-24 mt-30">
       <div v-for="(card, index) in cards" :key="index" class="relative">
         <div class="absolute top-250 goldenGradient h-65 rounded-10 w-full z-0">
@@ -40,7 +47,7 @@ Baccarat like never before.`,
           </div>
         </div>
 
-        <div class="bg-#efefef  h-270 rounded-10 relative z-10 p-20">
+        <div class="bg-#efefef h-270 rounded-10 relative z-10 p-20">
           <img :src="card.image" :alt="card.title" class="wh-full" />
         </div>
 
