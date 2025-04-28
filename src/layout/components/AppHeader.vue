@@ -1,9 +1,11 @@
 <script lang="ts" setup>
-import logo from '@/assets/imgs/logo.png'
+import logo from '@/assets/imgs/home/logo.png'
 import en from '@/assets/icons/en.svg'
 import zh from '@/assets/icons/zh.svg'
 import { NPopover, NCheckbox } from 'naive-ui'
 import i18n from '@/i18n'
+
+const router = useRouter()
 
 const showPopover = ref(false)
 
@@ -43,7 +45,12 @@ const toggleMobileMenu = () => {
   <header class="sm:h-auto md:h-auto min-h-67 text-white blueGradient user-select-none">
     <nav class="main-container flex flex-wrap justify-between items-center py-4">
       <div class="p-2 sm:p-6">
-        <img alt="Logo" class="h-50 w-auto sm:h-65" :src="logo" />
+        <img
+          alt="Logo"
+          class="h-50 w-auto sm:h-65 cursor-pointer"
+          :src="logo"
+          @click="router.push('/')"
+        />
       </div>
 
       <SvgIcon
@@ -71,8 +78,7 @@ const toggleMobileMenu = () => {
         </li>
       </ul>
 
-<!-- Mobile menu -->
- 
+      <!-- Mobile menu -->
 
       <div class="flex items-center gap-10 p-6 mr-40 md:mr-0">
         <img :src="languageIcon" :alt="currentLang" class="w-32 h-32 ml-10" />

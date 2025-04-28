@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import accessApi from '@/assets/imgs/access-api.png'
-import operatorAccess from '@/assets/imgs/operator-access.png'
-import service from '@/assets/imgs/service.png'
-import webDev from '@/assets/imgs/web-dev.png'
-import language from '@/assets/imgs/language.png'
+import accessApi from '@/assets/imgs//home/access-api.png'
+import operatorAccess from '@/assets/imgs/home/operator-access.png'
+import service from '@/assets/imgs/home/service.png'
+import webDev from '@/assets/imgs/home/web-dev.png'
+import language from '@/assets/imgs/home/language.png'
 
 const items = [
   {

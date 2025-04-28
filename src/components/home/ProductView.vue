@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import whitelabel from '@/assets/imgs/whitelabel.png'
-import tglive from '@/assets/imgs/tglive.png'
-import telebet from '@/assets/imgs/telebet.png'
+import whitelabel from '@/assets/imgs/home/whitelabel.png'
+import tglive from '@/assets/imgs/home/tglive.png'
+import telebet from '@/assets/imgs/home/telebet.png'
 
 const cards = [
   {
