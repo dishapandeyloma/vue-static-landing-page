@@ -65,7 +65,7 @@ Our expert team ensures your website stays fully operational and optimized. No m
       {{ $t(`We are not only support your company's success, we focus on value.`) }}
     </p>
 
-    <div class="grid grid-cols-2 gap-16 lg:gap-36 p-4 pt-20 lg:pt-0 lg:p-40 lg:mt-40">
+    <div class="grid grid-cols-2 gap-16 lg:gap-36 p-4 pt-20 lg:pt-0 lg:p-40 lg:mt-40" >
       <template v-for="(item, index) in items" :key="index">
         <template v-if="index % 2 === 0">
           <div class="flex justify-center bg-#efefef rounded-10 w-140 lg:w-380 h-140 lg:h-317">

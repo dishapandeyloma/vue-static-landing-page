@@ -9,7 +9,7 @@ import coin2 from '@/assets/imgs/contact/coin-2.png'
   <h2 class="text-center p-10 text-18 lg:text-32 font-700">
     Interested? Let’s talk.
         </h2>
-        <div class="text-#8399AE text-center lg:p-10 text-14 lg:text-20 font-400 leading-20">
+        <div class="text-#8399AE text-center lg:p-10 text-12 lg:text-20 font-400 leading-20 letter-spacing-0">
           Schedule a free consultation <br class="block sm:hidden"/> with our experts.
         </div>
         <div class="f-c-c">

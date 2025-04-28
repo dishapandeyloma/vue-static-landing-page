@@ -37,7 +37,7 @@ Our expert team ensures your website stays fully operational and optimized. No m
 </script>
 <template>
   <div class="relative h-270 lg:h-530">
-    <div class="absolute inset-0 bg-banner backdrop-filter blur-1.3 lg:blur-0"></div>
+    <div class="absolute inset-0 bg-banner backdrop-filter blur-1.4 lg:blur-0"></div>
 
     <div class="main-container z-10 relative flex w-full text-#fff">
       <div class="block lg:flex-col lg:w-1/2 mt-40 text-center lg:text-left">
@@ -101,6 +101,6 @@ Our expert team ensures your website stays fully operational and optimized. No m
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(14px);
 }
 </style>
