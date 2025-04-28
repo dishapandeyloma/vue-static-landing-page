@@ -61,14 +61,16 @@ Our expert team ensures your website stays fully operational and optimized. No m
     <p class="text-14 lg:text-20 font-400 text-center mt-10">
       {{ $t('solutions to meet every aspect of your business.') }}
     </p>
-    <p class="text-14 lg:text-20 font-400 text-center mt-20 leading-20">
+    <p class="text-14 lg:text-20 font-400 text-center my-20 leading-20">
       {{ $t(`We are not only support your company's success, we focus on value.`) }}
     </p>
 
     <div class="grid grid-cols-2 gap-4 lg:gap-24 p-4 pt-20 lg:pt-0 lg:p-40">
       <template v-for="(item, index) in items" :key="index">
         <template v-if="index % 2 === 0">
-          <img :src="item.imgSrc" :alt="item.imgAlt" class="w-140 lg:w-300 h-140 lg:h-300" />
+          <div class="f-c-c">
+            <img :src="item.imgSrc" :alt="item.imgAlt" class="w-140 lg:w-300 h-140 lg:h-300" />
+          </div>
           <div class="flex-col lg:flex-row lg:items-center">
             <div class="flex" :class="item.iconAlignment">
               <CIcon :name="item.icon" class="p-4 lg:p-0" size="60" />
@@ -98,7 +100,9 @@ Our expert team ensures your website stays fully operational and optimized. No m
               </div>
             </div>
           </div>
-          <img :src="item.imgSrc" :alt="item.imgAlt" class="w-140 lg:w-300 h-140 lg:h-300" />
+          <div class="f-c-c">
+            <img :src="item.imgSrc" :alt="item.imgAlt" class="w-140 lg:w-300 h-140 lg:h-300" />
+          </div>
         </template>
       </template>
     </div>
