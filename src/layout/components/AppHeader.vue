@@ -2,9 +2,7 @@
 
 import logo from '@/assets/imgs/home/logo.png'
 
-
 const router = useRouter()
-
 
 const navLinks = [
   { name: 'Products & Services', path: '/' },

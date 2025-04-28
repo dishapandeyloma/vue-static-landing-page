@@ -1,9 +1,8 @@
 <script lang="ts" setup>
 import tglive from '@/assets/imgs//home/tglive.png'
-import operatorAccess from '@/assets/imgs/home/operator-access.png'
-import service from '@/assets/imgs/home/service.png'
-import webDev from '@/assets/imgs/home/web-dev.png'
-import language from '@/assets/imgs/home/language.png'
+import yourCasino from '@/assets/imgs/whitelabel/your-casino.png'
+import userFriendly from '@/assets/imgs/whitelabel/user-friendly.png'
+import payment from '@/assets/imgs/whitelabel/payment.png'
 
 const items = [
   {
@@ -13,40 +12,27 @@ const items = [
     description: `A ready-made platform with a customizable back office and website template, complete with technical support.`,
   },
   {
-    imgSrc: operatorAccess,
+    imgSrc: yourCasino,
     imgAlt: 'White label',
-    icon: 'operator-access',
-    iconAlignment: '',
-    title: 'Operator Access 24/7',
+    title: 'Your casino. Your way.',
     description:
       "The integration of TGbaowang live stream product to the user end can be integrateed into customer's existing platform through API.",
   },
   {
-    imgSrc: service,
+    imgSrc: userFriendly,
     imgAlt: 'White label',
-    icon: 'service',
-    iconAlignment: 'justify-end',
-    title: 'Business Service',
+    title: 'Work Smarter, Not Harder with our User Friendly Backend',
     description: `Provide customized game hall service according to customer requirement and tailor made unique game hall.`,
   },
   {
-    imgSrc: webDev,
+    imgSrc: payment,
     imgAlt: 'White label',
-    icon: 'webdev',
-    iconAlignment: '',
-    title: 'Website Development',
+    title: 'Secure Payment System',
     description: `Uninterrupted Service, Always at Your Fingertips.
 Our expert team ensures your website stays fully operational and optimized. No matter the time zone. TGBaowang committed to delivering fast, reliable service, keeping your business running smoothly.`,
   },
 
-  {
-    imgSrc: language,
-    imgAlt: 'White label',
-    icon: 'language',
-    iconAlignment: 'justify-end',
-    title: 'Multi Language',
-    description: 'Global play, multi-language support.',
-  },
+
 ]
 </script>
 <template>
@@ -73,27 +59,37 @@ Our expert team ensures your website stays fully operational and optimized. No m
     <p class="text-14 lg:text-20 font-400 text-center mt-30">
       Ways dreamed of starting your own online casino but unsure about how to handle the day-to-day?
     </p>
-    <p class="text-14 lg:text-20 font-400 text-center mt-20">We'll take it from here.</p>
+    <p class="text-14 lg:text-20 font-400 text-center mt-10">We'll take it from here.</p>
     <div class="f-c-c">
-      <CButton class="mt-20"
-        ><span class="text-18 lg:text-20 font-700 text-center">How it works</span></CButton
-      >
+      <CButton class="mt-20"><span class="text-18 lg:text-20 font-700 text-center">How it works</span></CButton>
     </div>
+    
+    <div class="grid grid-cols-1 gap-10">
+  <template v-for="(item, index) in items" :key="index">
+    <div
+      :class="[
+      
+        'flex flex-col lg:flex-row items-center',
+        index % 2 !== 0 ? 'lg:flex-row-reverse' : ''
+      ]"
+      class="w-full mb-10"
+    >
 
-    <!-- flex box -->
-    <div class="flex gap-20">
-      <div class="f-c-c flex-1 text-center w-140 h-140 lg:w-380 lg:h-317">
-        <img :src="items[0].imgSrc" :alt="items[0].imgAlt" class="w-full h-full object-contain" />
+      <div class="flex justify-center items-center w-full lg:w-1/2">
+        <img :src="item.imgSrc" :alt="item.imgAlt" class="w-240 h-240 lg:w-400 lg:h-400 object-contain" />
       </div>
-      <div class="flex-1 flex-col justify-center">
-        <h2 class="text-16 lg:text-20 font-700 mt-10 lg:mt-0">
-          {{ $t(items[0].title) }}
+
+      <div class="flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-6 py-4 w-full lg:w-1/2">
+        <h2 class="text-16 lg:text-20 font-700">
+          {{ $t(item.title) }}
         </h2>
-        <p class="text-14 lg:text-16 leading-20 lg:leading-24 pt-8">
-          {{ items[0].description }}
+        <p class="text-14 lg:text-16 leading-20 lg:leading-24 pt-4">
+          {{ item.description }}
         </p>
       </div>
     </div>
+  </template>
+</div>
   </section>
 </template>
 
