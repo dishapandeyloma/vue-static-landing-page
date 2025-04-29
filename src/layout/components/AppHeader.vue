@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 import logo from '@/assets/imgs/home/logo.png'
 
 const router = useRouter()
@@ -29,19 +28,27 @@ const toggleMobileMenu = () => {
         />
       </div>
 
-      <SvgIcon name="menu" class="absolute top-20 right-10 cursor-pointer md:hidden" @click="toggleMobileMenu"
-        size="24" />
+      <SvgIcon
+        name="menu"
+        class="absolute top-20 right-10 cursor-pointer md:hidden"
+        @click="toggleMobileMenu"
+        size="24"
+      />
 
       <!-- Desktop menu -->
       <ul class="hidden md:flex flex-1 items-center justify-end gap-4 md:gap-10 p-2 sm:p-6">
-
-
         <li v-for="link in navLinks" :key="link.name">
           <div class="flex gap-x-10 md:gap-x-20">
-            <RouterLink :to="link.path" class="text-16 sm:text-16 font-500 text-#fff hover:text-primary ml-10"
-              active-class="text-primary hover:text-primary font-semibold">{{ link.name }}
+            <RouterLink
+              :to="link.path"
+              class="text-16 sm:text-16 font-500 text-#fff hover:text-primary ml-10"
+              active-class="text-primary hover:text-primary font-semibold"
+              >{{ link.name }}
             </RouterLink>
-            <div v-if="link.name !== navLinks[navLinks.length - 1].name" class="h-20 w-2 bg-#FFFFFF40"></div>
+            <div
+              v-if="link.name !== navLinks[navLinks.length - 1].name"
+              class="h-20 w-2 bg-#FFFFFF40"
+            ></div>
           </div>
         </li>
       </ul>
