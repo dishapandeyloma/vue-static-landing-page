@@ -62,7 +62,7 @@ const items = [
       <div class="flex-col gap-2 lg:gap-10">
         <span class="text-14 lg:text-16 font-400 gradient-gold-text">CLIENTS & PROVIDERS</span>
         <h2 class="font-700 text-18 lg:text-32">Our Partners</h2>
-        <p class="text-12 lg:text-16 font-400 leading-20 lg:leading-24">
+        <p class="text-12 lg:text-16 font-400 leading-20 lg:leading-24 lg:max-w-500 mx-auto">
           Unlock new opportunities with powerful partnerships designed to drive innovation and
           maximize your competitive edge. Join a network committed to mutual growth and success.
         </p>

@@ -31,8 +31,6 @@ const items = [
     description: `Uninterrupted Service, Always at Your Fingertips.
 Our expert team ensures your website stays fully operational and optimized. No matter the time zone. TGBaowang committed to delivering fast, reliable service, keeping your business running smoothly.`,
   },
-
-
 ]
 </script>
 <template>
@@ -61,37 +59,43 @@ Our expert team ensures your website stays fully operational and optimized. No m
     </p>
     <p class="text-14 lg:text-20 font-400 text-center mt-10">We'll take it from here.</p>
     <div class="f-c-c">
-      <CButton class="mt-20"><span class="text-18 lg:text-20 font-700 text-center">How it works</span></CButton>
+      <CButton class="mt-20"
+        ><span class="text-18 lg:text-20 font-700 text-center">How it works</span></CButton
+      >
     </div>
-    
+
     <div class="grid grid-cols-1 gap-10">
-  <template v-for="(item, index) in items" :key="index">
-    <div
-      :class="[
-      
-        'flex flex-col lg:flex-row items-center',
-        index % 2 !== 0 ? 'lg:flex-row-reverse' : ''
-      ]"
-      class="w-full mb-10"
-    >
+      <template v-for="(item, index) in items" :key="index">
+        <div
+          :class="[
+            'flex flex-col lg:flex-row items-center',
+            index % 2 !== 0 ? 'lg:flex-row-reverse' : '',
+          ]"
+          class="w-full mb-10"
+        >
+          <div class="flex justify-center items-center w-full lg:w-1/2">
+            <img
+              :src="item.imgSrc"
+              :alt="item.imgAlt"
+              class="w-240 h-240 lg:w-400 lg:h-400 object-contain"
+            />
+          </div>
 
-      <div class="flex justify-center items-center w-full lg:w-1/2">
-        <img :src="item.imgSrc" :alt="item.imgAlt" class="w-240 h-240 lg:w-400 lg:h-400 object-contain" />
-      </div>
-
-      <div class="flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-6 py-4 w-full lg:w-1/2">
-        <h2 class="text-16 lg:text-20 font-700">
-          {{ $t(item.title) }}
-        </h2>
-        <p class="text-14 lg:text-16 leading-20 lg:leading-24 pt-4">
-          {{ item.description }}
-        </p>
-      </div>
+          <div
+            class="flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-6 py-4 w-full lg:w-1/2"
+          >
+            <h2 class="text-16 lg:text-20 font-700">
+              {{ $t(item.title) }}
+            </h2>
+            <p class="text-14 lg:text-16 leading-20 lg:leading-24 pt-4">
+              {{ item.description }}
+            </p>
+          </div>
+        </div>
+      </template>
     </div>
-  </template>
-</div>
 
-<ContactUsBanner /> 
+    <ContactUsBanner />
   </section>
 </template>
 
