@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-// import people from '@/assets/imgs/aboutus/people.png'
 import vision from '@/assets/imgs/aboutus/vision.png'
 import approach from '@/assets/imgs/aboutus/approach.png'
 </script>
@@ -71,7 +70,6 @@ import approach from '@/assets/imgs/aboutus/approach.png'
           are in the Global Casinos and Online Gambling industry for the sole purpose of making
           profits.
         </p>
-        <!-- <img :src="people" class="mt-10 max-h-350 w-full rounded-16" alt="people" /> -->
         <div class="grid grid-cols-1 lg:grid-cols-2 mt-10 gap-16 mt-20">
           <div class="flex-1 flex-col p-16 bg-#E4E4E4 rounded-16">
             <img :src="vision" class="w-60 h-60" alt="people" />
@@ -104,6 +102,7 @@ import approach from '@/assets/imgs/aboutus/approach.png'
         </div>
       </div>
     </div>
+    <ContactUsBanner class="mt-40" />
   </section>
 </template>
 
