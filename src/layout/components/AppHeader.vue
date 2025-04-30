@@ -1,7 +1,22 @@
 <script lang="ts" setup>
 import logo from '@/assets/imgs/home/logo.png'
-import { NDrawer, NDrawerContent } from 'naive-ui'
+import { NDrawer, NDrawerContent, NDropdown } from 'naive-ui'
 import { useRouter } from 'vue-router'
+
+const options = [
+  {
+    label: 'Whilte Label',
+    key: '/products/whitelabel',
+  },
+  {
+    label: 'Live Casino',
+    key: '/products/live-casino',
+  },
+  {
+    label: 'Telebet',
+    key: '/products/telebet',
+  },
+]
 
 const router = useRouter()
 
@@ -11,8 +26,8 @@ const navLinks = [
     path: '/',
     children: [
       { name: 'White Label', path: '/products/whitelabel' },
-      { name: 'TG Live', path: '/products/tglive' },
-      { name: 'TG Sports', path: '/products/tgsports' },
+      { name: 'Live Casino', path: '/products/live-casino' },
+      { name: 'Telebet', path: '/products/telebet' },
     ],
   },
   { name: 'Partner', path: '/partners' },
@@ -30,6 +45,11 @@ const closeMobileMenu = () => {
 const showChildren = ref(false)
 const toggleShowChildren = () => {
   showChildren.value = !showChildren.value
+}
+
+const handleSelect = (key: string) => {
+  console.log(key)
+  router.push(key)
 }
 </script>
 
@@ -60,7 +80,33 @@ const toggleShowChildren = () => {
               :to="link.path"
               class="text-16 sm:text-16 font-500 text-#fff hover:text-primary ml-10"
               active-class="text-primary hover:text-primary font-semibold"
-              >{{ link.name }}
+            >
+              <template v-if="link.name === 'Products & Services'">
+                <n-dropdown
+                  trigger="hover"
+                  :options="options"
+                  @select="handleSelect"
+                  placement="bottom-start"
+                >
+                  <div class="px-8">
+                    {{ link.name }}
+                    <SvgIcon
+                      name="arrow-down"
+                      size="12"
+                      class="ml-6 transition-transform duration-300 group-hover:rotate-180"
+                      color="#ffff"
+                    />
+                  </div>
+                </n-dropdown>
+              </template>
+              <RouterLink
+                v-else
+                :to="link.path"
+                class="text-16 sm:text-16 font-500 text-#fff hover:text-primary ml-10"
+                active-class="text-primary hover:text-primary font-semibold"
+              >
+                {{ link.name }}
+              </RouterLink>
             </RouterLink>
             <div
               v-if="link.name !== navLinks[navLinks.length - 1].name"

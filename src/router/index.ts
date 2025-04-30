@@ -29,6 +29,16 @@ const router = createRouter({
       name: 'whiteLabel',
       component: () => import('../views/products/WhiteLabel.vue'),
     },
+    {
+      path: '/products/live-casino',
+      name: 'liveCasino',
+      component: () => import('../views/products/LiveCasino.vue'),
+    },
+    {
+      path: '/products/telebet',
+      name: 'telebet',
+      component: () => import('../views/products/TelebetView.vue'),
+    },
   ],
 })
 

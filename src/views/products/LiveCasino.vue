@@ -3,6 +3,7 @@ import tglive from '@/assets/imgs//home/tglive.png'
 import yourCasino from '@/assets/imgs/products/your-casino.png'
 import userFriendly from '@/assets/imgs/products/user-friendly.png'
 import payment from '@/assets/imgs/products/payment.png'
+import dealer from '@/assets/imgs/products/dealer.png'
 
 const items = [
   {
@@ -37,10 +38,10 @@ Our expert team ensures your website stays fully operational and optimized. No m
   <div class="relative h-270 lg:h-530">
     <div class="absolute inset-0 bg-banner backdrop-filter blur-1.4 lg:blur-0"></div>
 
-    <div class="main-container z-10 relative flex w-full text-#fff">
+    <div class="main-container z-10 relative f-c-c space-x-8 wh-full text-#fff">
       <div class="block lg:flex-col lg:w-1/2 mt-40 text-center lg:text-left">
         <h1 class="text-24 lg:text-48 font-700 mt-10 lg:mt-20">
-          Launch Your Own Brand with TG Baowang White Label Solution
+          Live Cassino The Ultimate Online Gaming Platform
         </h1>
         <p class="text-14 lg:text-20 font-400 mt-10 lg:mt-20 leading-24 lg:leading-36">
           Step into the booming online gaming industry with TG Baowang White Label Solution a
@@ -48,21 +49,20 @@ Our expert team ensures your website stays fully operational and optimized. No m
           hassle of developing software from scratch.
         </p>
       </div>
+      <div class="hidden lg:block pl-20">
+        <img :src="dealer" alt="Live Casino" class="max-w-500 max-h-300 h-full object-cover" />
+      </div>
     </div>
   </div>
   <section class="main-container mt-30">
     <h2 class="text-18 lg:text-32 font-700 text-center">
-      {{ $t('Build your Own brand, Be your own boss') }}
+      {{ $t('Why Choose Us for Your Business') }}
     </h2>
-    <p class="text-14 lg:text-20 font-400 text-center mt-10 lg:mt-20">
-      Ways dreamed of starting your own online casino but unsure about how to handle the day-to-day?
+    <p class="text-14 lg:text-20 font-400 text-center mt-10 lg:mt-20 leading-32">
+      Your Success is Our Mission - Scalable, Secure, and Built for Real Profit With Live Cassino,
+      you get more than just powerful software - you get a trusted technology partner who
+      understands what it takes to grow and scale in the fast-moving iGaming world.
     </p>
-    <p class="text-14 lg:text-20 font-400 text-center mt-10">We'll take it from here.</p>
-    <div class="f-c-c">
-      <CButton class="mt-20"
-        ><span class="text-18 lg:text-20 font-700 text-center">How it works</span></CButton
-      >
-    </div>
 
     <div class="grid grid-cols-1 gap-10">
       <template v-for="(item, index) in items" :key="index">
@@ -101,7 +101,7 @@ Our expert team ensures your website stays fully operational and optimized. No m
 
 <style lang="scss" scoped>
 .bg-banner {
-  background: url('@/assets/imgs/products/whitelabel-banner.png') no-repeat;
+  background: url('@/assets/imgs/products/live-casino.png') no-repeat;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
