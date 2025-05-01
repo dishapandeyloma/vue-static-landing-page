@@ -32,5 +32,17 @@ const items = [
       How Our Live Casino Products Help You Run Your Business Running a successful online gaming
       business requires more than just good games - it takes the right platform.
     </p>
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-16 lg:gap-24 mt-40">
+      <template v-for="(item, index) in items" :key="index">
+        <div
+          class="f-c-c flex-col gap-2 lg:gap-10 rounded-12 shadow-[0_0_21px_1px_#0000000F] bg-white px-40 py-20 space-y-2xl"
+        >
+          <SvgIcon :name="item.icon" size="24" class="p-10" />
+
+          <h2 class="font-600 text-16 leading-24">{{ item.title }}</h2>
+          <p class="text-12 lg:text-16 font-400 leading-24">{{ item.description }}</p>
+        </div>
+      </template>
+    </div>
   </div>
 </template>
