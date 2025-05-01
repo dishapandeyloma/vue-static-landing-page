@@ -32,7 +32,7 @@ const router = createRouter({
     {
       path: '/products/live-casino',
       name: 'liveCasino',
-      component: () => import('../views/products/LiveCasino.vue'),
+      component: () => import('../views/products/liveCasino/CasinoView.vue'),
     },
     {
       path: '/products/telebet',
