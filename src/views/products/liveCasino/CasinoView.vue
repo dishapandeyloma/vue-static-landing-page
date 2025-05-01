@@ -2,6 +2,7 @@
 import dealer from '@/assets/imgs/products/live-casino/dealer.png'
 import GameExperience from './GameExperience.vue'
 import MerchantOnboarding from './MerchantOnboarding.vue'
+import RunBusiness from './RunBusiness.vue'
 const items = [
   {
     icon: 'revenue',
@@ -93,6 +94,7 @@ const items = [
         </div>
       </template>
     </div>
+    <RunBusiness />
     <MerchantOnboarding />
     <GameExperience />
   </section>
