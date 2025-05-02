@@ -1,3 +1,3 @@
 export const getAssetsFile = (url: string) => {
-  return `/src/assets/${url}`
+  return new URL(`/src/assets/${url}`, import.meta.url).href
 }
