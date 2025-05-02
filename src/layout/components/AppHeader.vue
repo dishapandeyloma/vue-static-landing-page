@@ -119,23 +119,23 @@ const handleSelect = (key: string) => {
       <!-- Mobile menu -->
       <n-drawer v-model:show="mobileMenuOpen" placement="right" class="!w-100%">
         <n-drawer-content>
-          <ul class="flex flex-col gap-4 p-2 sm:p-6">
-            <SvgIcon name="cross" size="24" />
+          <SvgIcon name="cross" color="#000" class="float-end" @click="closeMobileMenu" />
+          <ul class="flex flex-col gap-4 p-10 mt-10">
             <li v-for="link in navLinks" :key="link.name">
               <RouterLink
                 :to="link.path"
-                class="text-16 sm:text-16 font-500 hover:text-primary ml-10"
+                class="text-16 sm:text-16 font-500 text-#000 hover:text-primary ml-10"
                 active-class="text-primary hover:text-primary font-semibold"
                 @click="closeMobileMenu"
                 >{{ link.name }}
               </RouterLink>
-              <template v-if="link.name === 'Products & Services'">
+              <!-- <template v-if="link.name === 'Products & Services'">
                 <li
                   v-for="(child, index) in link.children"
                   :key="index"
                   class="flex flex-col gap-4 p-2 sm:p-6"
                 >
-                  <div class="absolute top-20 right-10 cursor-pointer md:hidden">
+                  <div class="absolute top-40 right-10 cursor-pointer md:hidden">
                     <SvgIcon
                       name="arrow-down"
                       size="12"
@@ -155,7 +155,7 @@ const handleSelect = (key: string) => {
                     </RouterLink>
                   </ul>
                 </li>
-              </template>
+              </template> -->
             </li>
           </ul>
         </n-drawer-content>
