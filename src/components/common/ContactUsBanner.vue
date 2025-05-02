@@ -3,7 +3,7 @@ import coin1 from '@/assets/imgs/contact/coin-1.png'
 import coin2 from '@/assets/imgs/contact/coin-2.png'
 </script>
 <template>
-  <div class="bg-#EFEFEF mb-20 h-200 lg:h-400 relative">
+  <div class="bg-#EFEFEF mb-20 h-180 lg:h-350 relative">
     <div class="wh-full flex-col pt-20 lg:pt-60 absolute left-1/2 -translate-x-1/2">
       <h2 class="text-center p-10 text-18 lg:text-32 font-700">Interested? Let’s talk.</h2>
       <div

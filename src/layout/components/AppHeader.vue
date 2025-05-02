@@ -117,9 +117,10 @@ const handleSelect = (key: string) => {
       </ul>
 
       <!-- Mobile menu -->
-      <n-drawer v-model:show="mobileMenuOpen" placement="right">
+      <n-drawer v-model:show="mobileMenuOpen" placement="right" class="!w-100%">
         <n-drawer-content>
           <ul class="flex flex-col gap-4 p-2 sm:p-6">
+            <SvgIcon name="cross" size="24" />
             <li v-for="link in navLinks" :key="link.name">
               <RouterLink
                 :to="link.path"
