@@ -28,8 +28,7 @@ const items = [
     imgSrc: payment,
     imgAlt: 'White label',
     title: 'Secure Payment System',
-    description: `Uninterrupted Service, Always at Your Fingertips.
-Our expert team ensures your website stays fully operational and optimized. No matter the time zone. TGBaowang committed to delivering fast, reliable service, keeping your business running smoothly.`,
+    description: `Uninterrupted Service, Always at Your Fingertips.Our expert team ensures your website stays fully operational and optimized. No matter the time zone. TGBaowang committed to delivering fast, reliable service, keeping your business running smoothly.`,
   },
 ]
 </script>

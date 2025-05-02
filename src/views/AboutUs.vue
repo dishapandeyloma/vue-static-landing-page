@@ -5,7 +5,7 @@ import approach from '@/assets/imgs/aboutus/approach.png'
 
 <template>
   <section class="main-container">
-    <div class="flex flex-col-reverse md:flex-row lg:flex-row space-x-16 mt-40">
+    <div class="flex flex-col-reverse md:flex-row lg:flex-row lg:space-x-16 mt-40">
       <div class="w-full lg:w-1/3 rounded-16 py-10 px-4 bg-#F7F7F7 mt-10 lg:mt-0 md:mt-0">
         <div class="py-20">
           <div class="flex h-full -mt-4 px-10 h-150 relative">
@@ -58,7 +58,7 @@ import approach from '@/assets/imgs/aboutus/approach.png'
           </div>
         </div>
       </div>
-      <div class="flex-1 p-10">
+      <div class="flex-1 lg:p-10">
         <h2 class="text-18 lg:text-32 font-700 text-center lg:text-left md:text-left">
           About the Company
         </h2>

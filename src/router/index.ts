@@ -27,7 +27,7 @@ const router = createRouter({
     {
       path: '/products/whitelabel',
       name: 'whiteLabel',
-      component: () => import('../views/products/WhiteLabel.vue'),
+      component: () => import('../views/products/whitelabel/WhiteLabel.vue'),
     },
     {
       path: '/products/live-casino',
@@ -37,7 +37,7 @@ const router = createRouter({
     {
       path: '/products/telebet',
       name: 'telebet',
-      component: () => import('../views/products/TelebetView.vue'),
+      component: () => import('../views/products/telebet/TelebetView.vue'),
     },
   ],
 })
