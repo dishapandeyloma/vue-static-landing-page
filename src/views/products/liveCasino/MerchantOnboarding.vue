@@ -47,12 +47,12 @@ const themes = [
       Fast, Easy & Scalable - Start Earning in Minutes
     </p>
 
-    <div class="bg-black w-full h-700 lg:h-442 rounded-16 flex gap-x-20 mt-100">
+    <div class="bg-black w-full h-700 lg:h-442 rounded-16 flex mt-100">
       <div class="w-1/2 relative">
-        <img :src="app" class="absolute -top-100 left-0 h-130%" />
+        <img :src="app" class="absolute -top-60 left-0 h-120% pl-20" />
       </div>
 
-      <div class="flex-1 bg-img py-10">
+      <div class="flex-1 bg-img p-10">
         <div class="flex-col text-#ffff space-y-8 mt-10">
           <h2 class="text-16 lg:text-20 font-600">Choose Your Style: Light or Dark Theme</h2>
           <p class="text-14 font-400 mt-10 lg:mt-20 leading-22">

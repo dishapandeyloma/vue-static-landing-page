@@ -26,7 +26,7 @@ const items = [
 </script>
 
 <template>
-  <div class="mt-40">
+  <div class="mt-80">
     <h2 class="text-18 lg:text-32 font-700 text-center mt-40">
       Leading a new realm of gaming immersion experience
     </h2>
